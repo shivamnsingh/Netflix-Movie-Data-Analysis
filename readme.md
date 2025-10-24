@@ -1,21 +1,82 @@
-# Netflix Movie Data Analysis
+![Netflix Movie Data Analysis](https://raw.githubusercontent.com/<shivamnsingh>/netflix-movie-analysis/main/figures/netflix_banner.png)
 
-**Short:** Exploratory analysis of ~25k movie records — genre frequencies, popularity extremes, vote categories, and temporal release patterns.
+# 🎬 Netflix Movie Data Analysis Project  
 
-## Contents
-- `notebooks/01_exploration.ipynb` — step-by-step EDA and visualizations
-- `src/data_cleaning.py` — core cleaning & explode-genre logic
-- `figures/` — exported plots used in README/LinkedIn
-- `data/` — sample dataset (full dataset excluded for privacy / size)
+A complete **data science & analytics project** exploring insights from over **25,000 Netflix movie records**.  
+This project showcases **data cleaning, preprocessing, exploratory analysis, and visualization** using Python — revealing how genres, popularity, and release trends shape Netflix’s movie catalog.
 
-## How to run
-1. Create venv: `python -m venv venv && source venv/bin/activate`
-2. Install: `pip install -r requirements.txt`
-3. Open notebook: `jupyter lab notebooks/01_exploration.ipynb`
+---
 
-## Notes
-- `Vote_Average` is binned into ordinal categories: `['Not popular','below_average','average','popular']`.
-- Large/full dataset omitted. Use `data/mymoviedb_sample.csv` for reproducibility.
+## 🧠 Project Overview  
 
-## License
-MIT — see LICENSE file.
+Netflix is known for its use of **data science, AI, and machine learning** to build recommendation systems that understand user preferences.  
+In this project, I analyzed a dataset of **~25,552 movies** to answer key business questions such as:
+
+1. What is the most frequent genre of movies released on Netflix?  
+2. Which genres have the highest votes?  
+3. What movie has the **highest popularity**, and what is its genre?  
+4. What movie has the **lowest popularity**, and what is its genre?  
+5. Which **year** had the most films released?
+
+---
+
+## 📊 Dataset Details  
+
+- **Source:** `mymoviedb.csv`  
+- **Total Rows:** 25,552  
+- **Final Columns:**  
+  - `Release_Date` (Year extracted from date)  
+  - `Title`  
+  - `Popularity`  
+  - `Vote_Count`  
+  - `Vote_Average` *(Categorized into 4 bins)*  
+  - `Genre` *(Exploded for multi-genre movies)*  
+
+---
+
+## 🧹 Data Cleaning & Preprocessing  
+
+✔ Converted `Release_Date` → datetime → extracted **year**  
+✔ Dropped irrelevant columns (`Overview`, `Poster_URL`, `Original_Language`)  
+✔ Split multi-genre strings and **exploded** dataframe → one genre per row  
+✔ Transformed `Vote_Average` → **ordinal bins** using quartiles:  
+   `['Not popular', 'Below Average', 'Average', 'Popular']`  
+✔ Handled missing values, duplicates, and ensured numeric data types  
+
+---
+
+## 📈 Exploratory Data Analysis  
+
+Key visual insights:  
+
+- 🎭 **Genre Distribution:** Bar chart showing the most frequent genres  
+- ⭐ **Vote Average Categories:** Distribution of movies by popularity levels  
+- 📆 **Yearly Trend:** Histogram of movie releases over time  
+- 🔥 **Popularity Extremes:** Identified movies with highest & lowest popularity  
+- ⚠️ **Outlier Detection:** Popularity had visible outliers — recommended robust stats  
+
+---
+
+## 💡 Key Findings  
+
+- **Most frequent genres:** Drama, Comedy, and Action dominate Netflix releases.  
+- **Highest-voted genres:** Tend to be Drama and Documentary films.  
+- **Popularity:** Skewed toward a few major titles — clear long-tail trend.  
+- **Most filmed years:** 2017–2019 saw the maximum surge in Netflix content.  
+
+---
+
+## 🛠️ Tools & Libraries  
+
+| Category | Tools Used |
+|-----------|-------------|
+| Programming | Python |
+| Data Handling | pandas, numpy |
+| Visualization | seaborn, matplotlib |
+| Notebook | JupyterLab |
+| Version Control | Git, GitHub |
+
+---
+
+## 📂 Project Structure  
+
