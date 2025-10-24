@@ -1,4 +1,4 @@
-![Netflix Movie Data Analysis](https://raw.githubusercontent.com/<shivamnsingh>/netflix-movie-analysis/main/figures/netflix_banner.png)
+![Netflix Movie Data Analysis](https://raw.githubusercontent.com/shivamnsingh/netflix-movie-analysis/main/figures/netflix_banner.png)
 
 # 🎬 Netflix Movie Data Analysis Project  
 
@@ -79,4 +79,5 @@ Key visual insights:
 ---
 
 ## 📂 Project Structure  
+
 
